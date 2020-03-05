@@ -22,6 +22,7 @@ defmodule CounterWeb do
       use Phoenix.Controller, namespace: CounterWeb
 
       import Plug.Conn
+      import Phoenix.LiveView.Controller
       import CounterWeb.Gettext
       alias CounterWeb.Router.Helpers, as: Routes
     end
@@ -39,6 +40,7 @@ defmodule CounterWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
+      import Phoenix.LiveView.Helpers
       import CounterWeb.ErrorHelpers
       import CounterWeb.Gettext
       alias CounterWeb.Router.Helpers, as: Routes
@@ -48,6 +50,7 @@ defmodule CounterWeb do
   def router do
     quote do
       use Phoenix.Router
+      import Phoenix.LiveView.Router
       import Plug.Conn
       import Phoenix.Controller
     end

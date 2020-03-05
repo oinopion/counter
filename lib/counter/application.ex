@@ -9,10 +9,7 @@ defmodule Counter.Application do
     # List all child processes to be supervised
     children = [
       Counter.Store,
-      # Start the endpoint when the application starts
       CounterWeb.Endpoint
-      # Starts a worker by calling: Counter.Worker.start_link(arg)
-      # {Counter.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
